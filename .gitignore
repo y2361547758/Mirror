@@ -1,0 +1,8 @@
+#config file
+data/config.php
+
+#iis host file
+web.config
+
+#tmp dir
+.tmp/

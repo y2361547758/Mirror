@@ -57,8 +57,9 @@ require_once './data/config.php';
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);		//Get Respon Stream
 	curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);		//Get Respon Stream in Binary
 	curl_setopt($ch, CURLOPT_HEADER, true);				//Get Respen Stream Header
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);	//Do Not Verifypeer
-	//curl_setopt($ch,CURLOPT_PROXY,'127.0.0.1:8888');	//Set Develop Proxy
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);		//Do Not Verifypeer
+	//curl_setopt($ch, CURLOPT_PROXY, '127.0.0.1:8888');	//Set Develop Proxy
 
 	$header = array();									//Copy Request Headers
 	foreach($_SERVER as $key => $item){
